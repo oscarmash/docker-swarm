@@ -1,0 +1,6 @@
+- name: Modificacion plantilla Ubuntu
+  hosts: swarm
+  gather_facts: true
+
+  roles:
+    - docker-swarm
