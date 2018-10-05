@@ -1,23 +1,23 @@
 ---
 # tasks file for docker-swarm
 
-#- name: Ejecutando "apt-get update"
-#  apt:
-#    update_cache: yes
-#    cache_valid_time: 3600
-#
-#- name: Update all packages to the latest version
-#  apt:
-#    upgrade: dist
-#
-#- name: Upgrade all packages to the latest version
-#  apt:
-#    name: aptitude
-#    state: latest
-#
-#- name: Remove dependencies that are no longer required
-#  apt:
-#    autoremove: yes
+- name: Ejecutando "apt-get update"
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+
+- name: Upgrade all packages to the latest version
+  apt:
+    name: aptitude
+    state: latest
+
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
 
 - name: Add Docker GPG key
   apt_key: url=https://download.docker.com/linux/ubuntu/gpg
